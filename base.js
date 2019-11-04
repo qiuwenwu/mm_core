@@ -33,7 +33,7 @@ base.prototype.add = function(param) {
 	} else {
 		ret = this.events('add_main', pm);
 	}
-	return this.events('add_render', pm, ret) || ret;
+	return this.events('add_after', pm, ret) || ret;
 };
 
 /**
@@ -49,7 +49,7 @@ base.prototype.del = function(param) {
 	} else {
 		ret = this.events('del_main', pm);
 	}
-	return this.events('del_render', pm, ret) || ret;
+	return this.events('del_after', pm, ret) || ret;
 };
 
 /**
@@ -65,7 +65,7 @@ base.prototype.set = function(param) {
 	} else {
 		ret = this.events('set_main', pm);
 	}
-	return this.events('set_render', pm, ret) || ret;
+	return this.events('set_after', pm, ret) || ret;
 };
 
 /**
@@ -81,7 +81,7 @@ base.prototype.get = function(param) {
 	} else {
 		ret = this.events('get_main', pm);
 	}
-	return this.events('get_render', pm, ret) || ret;
+	return this.events('get_after', pm, ret) || ret;
 };
 
 /**
@@ -97,7 +97,7 @@ base.prototype.update = function(param) {
 	} else {
 		ret = this.events('update_main', pm);
 	}
-	return this.events('update_render', pm, ret) || ret;
+	return this.events('update_after', pm, ret) || ret;
 };
 
 /**
@@ -113,7 +113,7 @@ base.prototype.load = function(param) {
 	} else {
 		ret = this.events('load_main', pm);
 	}
-	return this.events('load_render', pm, ret) || ret;
+	return this.events('load_after', pm, ret) || ret;
 };
 
 /**
@@ -129,7 +129,7 @@ base.prototype.save = function(param) {
 	} else {
 		ret = this.events('save_main', pm);
 	}
-	return this.events('save_render', pm, ret) || ret;
+	return this.events('save_after', pm, ret) || ret;
 };
 
 /**
@@ -145,7 +145,7 @@ base.prototype.sort = function(param) {
 	} else {
 		ret = this.events('sort_main', pm);
 	}
-	return this.events('sort_render', pm, ret) || ret;
+	return this.events('sort_after', pm, ret) || ret;
 };
 
 /**
@@ -161,7 +161,7 @@ base.prototype.run = function(param) {
 	} else {
 		ret = this.events('run_main', pm);
 	}
-	return this.events('run_render', pm, ret) || ret;
+	return this.events('run_after', pm, ret) || ret;
 };
 
-module.exports.base = base
+module.exports.base = base;
