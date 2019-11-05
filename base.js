@@ -7,10 +7,15 @@ class base {
 	 * @param {String} dir
 	 */
 	constructor(dir) {
-
+		this.dir = dir;
 	}
 }
 
+/**
+ * 
+ * @param {Object} name
+ * @param {Object} param
+ */
 base.prototype.events = function(name, param) {
 	var func = this[name];
 	if (func) {
